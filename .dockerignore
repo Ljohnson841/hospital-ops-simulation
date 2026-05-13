@@ -1,0 +1,19 @@
+# Security
+.env
+
+# Local Environments
+.venv/
+__pycache__/
+
+# Documentation and Git
+README.MD
+.gitignore
+
+# Docker Configuration Files
+docker-compose.yaml
+Dockerfile
+
+# Local Data and Research 
+data/
+notebooks/
+admin/

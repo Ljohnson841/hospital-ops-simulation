@@ -24,6 +24,19 @@ services:
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     depends_on:
       - db
+    
+  app:
+    build:
+      context: .
+    container_name: hospital_ingest
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=db
+    depends_on:
+      - db
+
 
 volumes:
   postgres_data:
